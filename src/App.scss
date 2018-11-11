@@ -1,0 +1,45 @@
+html, body, #root, .App {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: calc(100% - 50px);
+
+  aside {
+    width: 30%;
+    min-width: 300px;
+  }
+
+  .map-area {
+    flex-grow: 1;
+  }
+}
+
+header {
+  text-align: center;
+  height: 50px;
+  background: red;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #fff;
+  margin: 0 12px;
+  cursor: pointer;
+
+  &.right {
+    border-right-color: transparent;
+    border-left-color: #fff;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: .5;
+  }
+}
